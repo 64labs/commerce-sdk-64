@@ -29,7 +29,6 @@
     "lint": "npm run lint:dev -- --quiet",
     "lint:dev": "sort-package-json && eslint . --ext .ts --fix",
     "prepack": "npm run build",
-    "prepare": "snyk protect",
     "renderTemplates": "ts-node src/generate.ts",
     "snyk:auth": "snyk auth",
     "pretest": "npm run lint && npm run depcheck",
