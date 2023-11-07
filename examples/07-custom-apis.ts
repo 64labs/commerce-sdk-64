@@ -29,7 +29,7 @@ async function getGuestUserAuthToken() {
 }
 
 async function getActivePaymentMethods() {
-  const customClient = new Custom.Custom64Labs(config);
+  const customClient = new Custom.Scapi(config);
   const _result = await customClient.getActivePaymentMethods({
     parameters: { siteId: SITE_ID },
   });
@@ -38,7 +38,7 @@ async function getActivePaymentMethods() {
 }
 
 async function getCustomerGroups() {
-  const customClient = new Custom.Custom64Labs(config);
+  const customClient = new Custom.Scapi(config);
   const _result = await customClient.getCustomerGroups({
     parameters: { siteId: SITE_ID },
   });
@@ -47,7 +47,7 @@ async function getCustomerGroups() {
 }
 
 async function getSitePreferences() {
-  const customClient = new Custom.Custom64Labs(config);
+  const customClient = new Custom.Scapi(config);
   const _result = await customClient.getSitePreferences({
     parameters: { siteId: SITE_ID },
   });

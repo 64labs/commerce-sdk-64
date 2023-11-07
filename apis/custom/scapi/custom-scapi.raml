@@ -1,9 +1,9 @@
 #%RAML 1.0
-title: Custom64labs
+title: SCAPI
 version: v1
 mediaType: application/json
 protocols: HTTPS
-baseUri: https://{shortCode}.api.commercecloud.salesforce.com/custom/custom-64labs/{version}
+baseUri: https://{shortCode}.api.commercecloud.salesforce.com/custom/scapi/{version}
 baseUriParameters:
   shortCode:
     description: A region-specific merchant identifier.
@@ -13,7 +13,8 @@ baseUriParameters:
 description: This is the 64labs Custom API.
 
 uses:
-  CommerceCloudStandards: commerce-cloud-standards.raml
+  ApiStandards: exchange_modules/893f605e-10e2-423a-bdb4-f952f56eb6d8/api-standards/1.1.15/api-standards.raml
+  CommerceCloudStandards: exchange_modules/893f605e-10e2-423a-bdb4-f952f56eb6d8/commerce-cloud-standards/1.0.27/commerce-cloud-standards.raml
 
 /organizations/{organizationId}:
   type: CommerceCloudStandards.Organization

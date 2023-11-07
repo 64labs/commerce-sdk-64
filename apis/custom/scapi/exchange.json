@@ -1,7 +1,7 @@
 {
   "name": "64labs custom SCAPI endpoints",
-  "main": "custom-64labs.raml",
-  "assetId": "custom-64labs",
+  "main": "custom-scapi.raml",
+  "assetId": "custom-scapi",
   "version": "0.0.01",
   "apiVersion": "v1",
   "classifier": "raml",
