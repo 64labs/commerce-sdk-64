@@ -70,6 +70,7 @@ describe("setupApis", () => {
     expect(children).to.have.members([
       "cdn",
       "checkout",
+      "custom",
       "customer",
       "discovery",
       "experience",
