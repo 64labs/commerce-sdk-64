@@ -53,6 +53,28 @@ uses:
       securedBy:
         - CommerceCloudStandards.ShopperToken: { scopes: [sfcc.shopper-products] }
 
+  /geo-ip:
+      get:     
+        description: 'Hello Dave 1.' 
+        displayName: getGeoIp      
+        is:
+          - CommerceCloudStandards.SiteSpecific:
+        queryParameters:
+          c_ipAddress:
+            description: dave blah!
+            maxLength: 100
+            type: string
+            example: apple-ipod-shuffle
+        responses:
+          '200':
+            description: Success.
+            body:
+              application/json:
+                type: ProductResult
+                examples:
+                  product_result: !include Examples/product-result-example.raml
+        securedBy:
+          - CommerceCloudStandards.ShopperToken: { scopes: [sfcc.shopper-products] }
   /site-preferences:
     get:     
       description: 'Hello Dave 1.' 
