@@ -46,6 +46,19 @@ async function getCustomerGroups() {
   return _result;
 }
 
+async function getGeoIP() {
+  const customClient = new Custom.Scapi(config);
+  const _result = await customClient.getGeoIp({
+    parameters: {
+      siteId: SITE_ID,
+      c_ipAddress: '67.9.36.11'  
+      // c_ipAddress: '147.161.166.254'  
+    },
+  });
+  console.log("Geo IP: ", _result);
+  return _result;
+}
+
 async function getSitePreferences() {
   const customClient = new Custom.Scapi(config);
   const _result = await customClient.getSitePreferences({
@@ -62,6 +75,7 @@ getGuestUserAuthToken()
   .then(async () => {
     const _activePaymentMethods = await getActivePaymentMethods();
     const _customerGroups = await getCustomerGroups();
+    const _geoIP = await getGeoIP();
     const _sitePreferences = await getSitePreferences();
     return;
   })
